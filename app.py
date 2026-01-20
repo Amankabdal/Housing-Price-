@@ -1,4 +1,4 @@
-%%writefile app.py
+
 
 
 import streamlit as st
@@ -52,3 +52,4 @@ if st.button("Calculate Property Value"):
 
     prediction = model.predict(input_data)
     st.success(f"Estimated Market Price: **${prediction[0]:,.2f}**")
+
