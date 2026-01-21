@@ -15,7 +15,7 @@ st.write("Enter the property details to get an AI-powered valuation.")
 col1, col2 = st.columns(2)
 
 with col1:
-    area = st.slidebar.slider("Total Area (sq ft)", value=2000, step=100)
+    area = st.number_input("Total Area (sq ft)", value=2000, step=100)
     bedrooms = st.slider("Number of Bedrooms", 1, 6, 3)
     bathrooms = st.slider("Number of Bathrooms", 1, 5, 2)
     stories = st.slider("Number of Stories", 1, 4, 1)
@@ -52,6 +52,7 @@ if st.button("Calculate Property Value"):
 
     prediction = model.predict(input_data)
     st.success(f"Estimated Market Price: **${prediction[0]:,.2f}**")
+
 
 
 
