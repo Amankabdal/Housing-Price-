@@ -8,7 +8,7 @@ import joblib
 # Ensure 'house_model.pkl' is in the same folder as this script
 model = joblib.load('house_model.pkl')
 
-st.title("Comprehensive House Price Predictor 🏠")
+st.title("Comprehensive House Price Predictor 🏠  :by:-Aman Kabdal")
 st.write("Enter the property details to get an AI-powered valuation.")
 
 # 2. Layout with Columns
@@ -52,6 +52,7 @@ if st.button("Calculate Property Value"):
 
     prediction = model.predict(input_data)
     st.success(f"Estimated Market Price: **${prediction[0]:,.2f}**")
+
 
 
 
